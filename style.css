@@ -1,0 +1,745 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic);
+
+* {
+    box-sizing: border-box;
+}
+body {
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  background-color: white;
+}
+
+.row:before,
+.row:after {
+    content: " "; 
+    display: block;
+}
+
+.row:after {
+    clear: both;
+}
+
+
+
+header {
+  height: 50px;
+  background-color: rgba(49,50,52,0.5);
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header > nav img {
+  padding: 10px 0;
+  float: left;
+  margin: 0 auto;
+}
+header > nav ul {
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 0;
+}
+header > nav ul > li {
+  display:inline-block;
+  font-size: 18px;
+}
+
+header > nav ul > li > a {
+  line-height: 50px;
+  display: block;
+  color: #fff;
+  padding: 0 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+header > nav ul > li > a:hover {
+  background: #ccc;
+  color: #00C6EA;
+}
+.hero {
+	width: 100%;
+	height: 800px;
+	background: url(https://static.pexels.com/photos/300263/pexels-photo-300263.jpeg);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+.slogan {
+	width: 800px;
+	height: 300px;
+	background: rgba(0, 0, 0, 0.5);
+	display: block;
+	color: white;
+    position: absolute;
+    top: 300px;
+	right: 0;
+}
+.slogan h1 {
+	text-transform: uppercase;
+	text-align: left;
+	padding-left: 50px;
+	padding-top: 20px;
+	font-size: 45px;
+}		
+[class*="col-"] {
+	float: left;
+	min-height: 50px;
+	padding: 0;
+	text-align: center;
+/*	border: 2px solid black; /*<-- dodatkowy border dla widoczności komórek */ 
+}	
+
+/* sekcja z trzema elementami w jednej linii*/
+
+.icon {
+	text-align: center;
+	margin: 50px auto;
+	padding: 30px;
+}
+
+.icon i {
+	font-size: 100px;
+	border-radius: 15%;
+	color: white;
+	padding: 25px;
+}	
+
+.icon a {
+	text-decoration: none;
+	display: block;
+}
+
+.icon a:hover i {
+	background-color: #00C6EA;
+	transition: 0.3s;
+	cursor:pointer;
+}
+
+.icon a:hover h2{
+	color: #00C6EA;
+	transition: 0.3s;
+	cursor:pointer;
+}
+.fa-search, .fa-cogs, .fa-laptop {
+	background-color: #313332;
+}
+.icon h2 {
+	text-transform: uppercase;
+	color: #313332;
+	text-decoration: none;
+}
+
+.icon p {
+	padding: 15px;
+}
+
+/*sekcja - nagłówek z tekstem*/
+  
+.one {
+	width: 900px;
+	height: 300px;
+	margin: auto;
+	text-align: center;
+}
+.one h1 {
+	text-transform: uppercase;
+	padding-top: 25px;
+	font-size: 50px;
+}
+
+/*sekcja - galeria*/
+
+.gallery {
+	width: 100%;
+	height: 350px;
+	margin: 0;
+	display: block;
+}
+
+.image {
+	width: 100%;
+	height: 350px;
+	position: relative;
+	object-fit: cover;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+}
+
+.image .layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: .8s;
+  color: #fff;
+  text-align: center;
+}
+
+.image .layer .fa {
+  margin-right: 25px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: .8s;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 25px;
+}
+
+.image:hover .layer {
+  background: rgba(0, 0, 0, .5);
+}
+
+.image:hover .layer .fa {
+  opacity: 1;
+}
+
+.image .layer .fa:hover {
+	cursor: pointer;
+	background: #999;
+}
+
+
+/*sekcja z czterema elementami w jednej linii, w których mamy pracowników klienta*/
+
+.team .col-3 {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.foto {
+	margin: 0 auto;
+	height: 200px;
+	width: 200px;
+	position: relative;
+	opacity: 0.5;
+}
+
+.foto img {
+	border-radius: 50%;
+}
+
+.foto .occupation {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+	opacity: 0;
+	border-radius: 50%;
+	padding: 70px;
+}
+
+.foto:hover {
+	cursor: pointer;
+	opacity: 1;
+}
+
+.foto .occupation:hover {
+	opacity: 1;
+}
+
+
+/*tablet i  dodatkowe info*/	
+	
+.promo {
+	width: 1200px;
+	margin: 0 auto;
+	width: 100%;
+	background-size: cover;
+	display: block;
+  	overflow: hidden;
+  	position: relative;
+	background-color: grey;
+	color: white;
+}	
+
+.promo img {
+	width: 300px;
+	margin: 0 auto;
+	bottom: 0;
+	position: absolute;
+	display: block;
+}
+
+.promo h1 {
+	padding-top: 20px;
+	text-transform: uppercase;
+	font-size: 62px;
+	padding-left: 40px;
+	padding-right: 30px;
+	text-align: left;
+}
+
+.promo p {
+	padding-left: 40px;
+	padding-right: 30px;
+	margin-bottom: 30px;
+	text-align: left;
+}
+
+
+
+/*cyferki*/	
+
+.figures {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.figures p {
+	color: #00C6EA;
+	text-transform: uppercase;
+	font-size: 30px;
+	margin-top: 0;
+	font-weight: 900;
+
+}
+
+.figures h2 {
+	font-size: 80px;
+	font-weight: 900;
+	margin-bottom: 0;
+	color: #313332;
+}
+
+
+/*stopka*/	
+
+.stopka {
+	background-color: #313332;
+	color: white;
+}
+
+.stopka h3 {
+	text-transform: uppercase;
+	margin: 40px 100px 0 0;
+	position: relative;
+	display: inline-block;
+}
+
+.stopka h3::after {
+  content: '';
+  display: block;
+  width: 75px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 15px);
+}
+
+.stopka p {
+	margin: 20px;
+	text-align: left;
+}
+
+#social-media a {
+	font-size: 35px;
+	padding: 4px 10px;
+	color: #fff;
+	background-color: #00C7E8;
+	margin: 5px;
+	display:inline-block;
+}
+
+#social-media a:hover {
+	background-color: #313332;
+	transition: .5s; 
+	cursor: pointer;
+	border-radius: 2px;
+}
+
+.dolna {
+	background-color: #313234;
+	height: 50px;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.dolna p {
+	text-align: center;
+}
+
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}	
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.col-offset-1 {margin-left: 8.33%;}
+.col-offset-2 {margin-left: 16.66%;}
+.col-offset-3 {margin-left: 25%;}
+.col-offset-4 {margin-left: 33.33%;}
+.col-offset-5 {margin-left: 41.66%;}
+.col-offset-6 {margin-left: 50%;}
+.col-offset-7 {margin-left: 58.33%;}
+.col-offset-8 {margin-left: 66.66%;}
+.col-offset-9 {margin-left: 75%;}
+.col-offset-10 {margin-left: 83.33%;}
+.col-offset-11 {margin-left: 91.66%;}
+.col-offset-12 {margin-left: 100%;}
+
+@media (max-width: 459px){
+  /*For mobiles*/
+  .col-xs-1 {width: 8.33%;}
+  .col-xs-2 {width: 16.66%;}
+  .col-xs-3 {width: 25%;}
+  .col-xs-4 {width: 33.33%;}
+  .col-xs-5 {width: 41.66%;}
+  .col-xs-6 {width: 50%;}
+  .col-xs-7 {width: 58.33%;}
+  .col-xs-8 {width: 66.66%;}
+  .col-xs-9 {width: 75%;}
+  .col-xs-10 {width: 83.33%;}
+  .col-xs-11 {width: 91.66%;}
+  .col-xs-12 {width: 100%;}
+}
+
+@media (min-width: 460px) and (max-width: 769px){
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+	
+	.col-offset-s-0 {margin-left: 0;}
+}
+
+@media (min-width: 831px) {
+    /* For desktop: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+.col-offset-1{margin-left: 8.33%;}
+.col-offset-2{margin-left: 16.66%;}
+.col-offset-3{margin-left: 25%;}
+.col-offset-4{margin-left: 33.33%;}
+.col-offset-5{margin-left: 41.66%;}
+.col-offset-6{margin-left: 50%;}
+.col-offset-7{margin-left: 58.33%;}
+.col-offset-8{margin-left: 66.66%;}
+.col-offset-9{margin-left: 75%;}
+.col-offset-10{margin-left: 83.33%;}
+.col-offset-11{margin-left: 91.66%;}
+
+
+@media (min-width: 460px) and (max-width: 830px){
+    /* For tablets: */
+
+header {          /* czemu header nie zjeżdża na dół??*/
+	height: auto;
+	text-align: center;
+}
+
+header > nav ul  {
+	float: none;
+	display: block;
+}
+
+header > nav ul > li  {
+	text-align: center;
+	display: block;
+}
+
+header .logo {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+}
+	
+.hero {
+	height: 80vh;
+}	
+	
+.slogan {
+	float: right;
+	width: 50%;
+	height: 30vh;
+}
+.slogan h1 {
+	text-transform: uppercase;
+	text-align: left;
+	padding-left: 20px;
+	padding-top: 20px;
+	font-size: 30px;
+}
+	
+
+.one {
+	width: 100%;
+}	
+
+.one h1 {
+	font-size: 30px;
+}
+	
+.one p {
+	padding: 5%;
+}
+	
+.image {
+	width: 100%;
+	height: auto;
+	position: relative;
+	object-fit: cover;
+}
+
+.image .layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.image .layer .fa {
+  margin-right: 25px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: .8s;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 25px;
+}
+
+.image:hover .layer {
+  background: rgba(0, 0, 0, 0);
+}
+
+.promo {
+	width: 100%;
+	margin: 0 auto;
+	background-size: cover;
+	display: block;
+  	overflow: hidden;
+  	position: relative;
+	background-color: grey;
+	color: white;
+}	
+
+.promo img {
+	width: 75%;
+	float: none;
+	display: block;
+	margin: 0 auto;
+	position: static;
+}
+
+.promo h1 {
+	padding-top: 20px;
+	text-transform: uppercase;
+	font-size: 62px;
+	padding-left: 5%;
+	padding-right: 5%;
+	text-align: center;
+}
+
+.promo p {
+	padding-left: 5%;
+	padding-right: 5%;
+	margin-bottom: 5%;
+	text-align: center;
+}
+
+.col-offset-4 {
+	margin: 0;
+}
+
+.stopka h3 {
+	text-align: center;
+}
+
+#social-media i {
+	padding-bottom: 5px;
+	display:inline-block;
+}
+
+}
+
+@media (max-width: 459px){
+  /*For mobiles*/
+
+header {          /* czemu header nie zjeżdża na dół??*/
+	height: auto;
+	text-align: center;
+}
+
+header > nav ul  {
+	float: none;
+	display: block;
+}
+
+header > nav ul > li  {
+	text-align: center;
+	display: block;
+}
+
+header .logo {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+}
+	
+.hero {
+	height: 80vh;
+}	
+	
+.slogan {
+	float: right;
+	width: 50%;
+	height: 30vh;
+}
+.slogan h1 {
+	text-transform: uppercase;
+	text-align: left;
+	padding-left: 20px;
+	padding-top: 20px;
+	font-size: 20px;
+}
+	
+
+.one {
+	width: 100%;
+}	
+
+.one h1 {
+	font-size: 35px;
+}
+	
+.one p {
+	padding: 5%;
+}
+	
+.image {
+	width: 100%;
+	height: auto;
+	position: relative;
+	object-fit: cover;
+}
+
+.image .layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.image .layer .fa {
+  margin-right: 25px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: .8s;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 25px;
+}
+
+.image:hover .layer {
+  background: rgba(0, 0, 0, 0);
+}
+
+.promo {
+	width: 100%;
+	margin: 0 auto;
+	background-size: cover;
+	display: block;
+  	overflow: hidden;
+  	position: relative;
+	background-color: grey;
+	color: white;
+}	
+
+.promo img {
+	width: 75%;
+	float: none;
+	margin: 0 auto;
+	position: static;
+	display: block;
+}
+
+.promo h1 {
+	padding-top: 20px;
+	text-transform: uppercase;
+	font-size: 50px;
+	padding-left: 5%;
+	padding-right: 5%;
+	text-align: center;
+}
+
+.promo p {
+	padding-left: 5%;
+	padding-right: 5%;
+	margin-bottom: 5%;
+	text-align: center;
+}
+
+.col-offset-4 {
+	margin: 0;
+}
+
+.stopka h3 {
+	text-align: center;
+}
+
+#social-media i {
+	padding-bottom: 5px;
+}
+
+#social-media a {
+	font-size: 22px;
+	padding: 4px 10px;
+	color: #fff;
+	background-color: #00C7E8;
+	margin: 5px;
+  
+  
+}
+}
+	
+	
+	
+	
+	
+	
+	
+	
+
